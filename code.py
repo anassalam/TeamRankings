@@ -56,3 +56,7 @@ y_number_of_players = []
 for i in range(0, len(cricket)):
     y_number_of_players.append(len(cricket[i][1]))
 print(y_number_of_players)
+
+#to check if number of teams on index [0] matches with their players in index [1]
+print(len(x_name_of_team))
+print(len(y_number_of_players))
