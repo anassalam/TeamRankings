@@ -74,3 +74,11 @@ plt.legend(['avg no. of players'])
 
 plt.show()
 plt.savefig('myfig.jpg', dpi=300)
+
+# In[3]:
+
+array = []
+for i in range(0, 10):
+    for j in range(0, 10):
+        for k in range(0, 10):
+            array.append(i * j * k)
