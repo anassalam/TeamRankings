@@ -31,6 +31,10 @@ with open('CricketTeams.txt', 'r') as file:
       
       for child in rawPlayers:
             playerSet.add(child.text)
+      
+      team = []
+      team.append(x.split(',')[0])
+      team.append(listPlayers)
           
 
 with open('CricketTeams.json', 'w', encoding='utf-8') as file:
