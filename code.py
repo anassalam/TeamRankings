@@ -9,7 +9,9 @@
 import json
 import requests
 from bs4 import BeautifulSoup
-
+import matplotlib.pyplot as plt
+import seaborn as sns
+import numpy as np
 
 # In[2]:
 
@@ -65,3 +67,4 @@ plt.bar(x_name_of_team, y_number_of_players, width=.5)
 
 avg = np.mean(y_number_of_players)
 plt.plot(x_name_of_team, [avg] * len(y_number_of_players), color='red', lw=1, ls='--')
+
