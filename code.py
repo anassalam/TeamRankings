@@ -85,3 +85,7 @@ for i in range(0, 10):
 
 my_array = [i*j*k for i in range(0,10) for j in range(0,10) for k in range(0,10)]
 print (my_array)
+
+assert array == my_array
+
+print (my_array)
