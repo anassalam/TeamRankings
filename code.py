@@ -51,3 +51,8 @@ x_name_of_team = []
 for i in range(0, len(cricket)):
     x_name_of_team.append(cricket[i][0])
 print(x_name_of_team)
+
+y_number_of_players = []
+for i in range(0, len(cricket)):
+    y_number_of_players.append(len(cricket[i][1]))
+print(y_number_of_players)
