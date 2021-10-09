@@ -20,6 +20,8 @@ with open('text.txt', 'r') as file:
       
       html = requests.get(url)
       soup = BeautifulSoup(html.content, 'html.parser')
+      
+      rawPlayers = soup.find_all('td', class_="divider")
 
 with open('text.json', 'w', encoding='utf-8') as file:
     json.dump(team, file, ensure_ascii=False, indent=2)
