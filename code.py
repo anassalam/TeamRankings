@@ -46,3 +46,8 @@ with open('CricketTeams.txt', 'r') as file:
 
 with open('CricketTeams.json', 'w', encoding='utf-8') as file:
     json.dump(cricket, file, ensure_ascii=False, indent=2)
+    
+x_name_of_team = []
+for i in range(0, len(cricket)):
+    x_name_of_team.append(cricket[i][0])
+print(x_name_of_team)
