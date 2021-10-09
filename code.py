@@ -65,6 +65,8 @@ print(len(y_number_of_players))
 
 plt.bar(x_name_of_team, y_number_of_players, width=.5)
 
+plt.xticks(x_name_of_team, x_name_of_team, rotation='vertical')
+
 avg = np.mean(y_number_of_players)
 plt.plot(x_name_of_team, [avg] * len(y_number_of_players), color='red', lw=1, ls='--')
 
