@@ -10,6 +10,9 @@ import json
 import requests
 from bs4 import BeautifulSoup
 
+
+# In[2]:
+
 cricket = []
 
 with open('CricketTeams.txt', 'r') as file:
@@ -25,6 +28,10 @@ with open('CricketTeams.txt', 'r') as file:
       
       rawPlayers = soup.find_all('td', class_="divider")
       playerSet = set([])
+      
+      for child in rawPlayers:
+            playerSet.add(child.text)
+          
 
 with open('CricketTeams.json', 'w', encoding='utf-8') as file:
     json.dump(cricket, file, ensure_ascii=False, indent=2)
