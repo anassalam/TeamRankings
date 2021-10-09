@@ -31,6 +31,10 @@ with open('CricketTeams.txt', 'r') as file:
       
       for child in rawPlayers:
             playerSet.add(child.text)
+          
+      listPlayers = []
+      for player in playerSet:
+          listPlayers.append(player)
       
       team = []
       team.append(x.split(',')[0])
