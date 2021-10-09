@@ -72,3 +72,5 @@ plt.plot(x_name_of_team, [avg] * len(y_number_of_players), color='red', lw=1, ls
 
 plt.legend(['avg no. of players'])
 
+plt.show()
+plt.savefig('myfig.jpg', dpi=300)
