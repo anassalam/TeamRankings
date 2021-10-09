@@ -10,7 +10,7 @@ import json
 
 cricket = []
 
-with open('text.txt', 'r') as file:
+with open('CricketTeams.txt', 'r') as file:
   print(cricket)
   
   for line in file:
@@ -24,5 +24,5 @@ with open('text.txt', 'r') as file:
       rawPlayers = soup.find_all('td', class_="divider")
       playerSet = set([])
 
-with open('text.json', 'w', encoding='utf-8') as file:
-    json.dump(team, file, ensure_ascii=False, indent=2)
+with open('CricketTeams.json', 'w', encoding='utf-8') as file:
+    json.dump(cricket, file, ensure_ascii=False, indent=2)
