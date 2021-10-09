@@ -19,6 +19,7 @@ with open('text.txt', 'r') as file:
       print(url)
       
       html = requests.get(url)
+      soup = BeautifulSoup(html.content, 'html.parser')
 
 with open('text.json', 'w', encoding='utf-8') as file:
     json.dump(team, file, ensure_ascii=False, indent=2)
