@@ -40,6 +40,9 @@ with open('CricketTeams.txt', 'r') as file:
       team.append(x.split(',')[0])
       team.append(listPlayers)
           
+      cricket.append(team)
+        
+  print(cricket)
 
 with open('CricketTeams.json', 'w', encoding='utf-8') as file:
     json.dump(cricket, file, ensure_ascii=False, indent=2)
