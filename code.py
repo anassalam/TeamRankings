@@ -60,3 +60,5 @@ print(y_number_of_players)
 #to check if number of teams on index [0] matches with their players in index [1]
 print(len(x_name_of_team))
 print(len(y_number_of_players))
+
+plt.bar(x_name_of_team, y_number_of_players, width=.5)
