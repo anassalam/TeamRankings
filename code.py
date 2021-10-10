@@ -89,3 +89,9 @@ print (my_array)
 assert array == my_array
 
 print (my_array)
+
+def numerical_analysis(randList):
+    mn = min(randList)
+    mx = max(randList)
+    av = sum(randList) / len(randList)
+    return mn, mx, av
