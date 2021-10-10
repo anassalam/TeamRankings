@@ -158,3 +158,7 @@ for poet in urduPoets:
         poetObj["urdu"]=name
 
 urduPoets.close()
+
+print(dictPoets)
+with open('poetsDictionary.json', 'w') as fp:
+    json.dump(dictPoets, fp)
