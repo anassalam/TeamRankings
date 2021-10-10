@@ -126,3 +126,35 @@ dictPoets = {}
 engPoets = open("rekhta_poets_english.tsv","r")
 hindiPoets = open("rekhta_poets_hindi.tsv","r",encoding="utf8")
 urduPoets = open("rekhta_poets_urdu.tsv","r",encoding="utf8")
+
+for poet in engPoets:
+    poetInfo = poet.split("\t")
+    name = poetInfo[0].strip()
+    link = poetInfo[1].strip()
+    dictPoets[link] = { "english" : name }
+
+engPoets.close()
+
+for poet in hindiPoets:
+    poetInfo = poet.split("\t")
+    name = poetInfo[0].strip()
+    link = poetInfo[1].strip().split("?")[0]
+    poetObj = dictPoets.get(link)
+    if poetObj == None:
+        dictPoets[link]={"hindi":name}
+    else:
+        poetObj["hindi"]=name
+
+hindiPoets.close()
+
+for poet in urduPoets:
+    poetInfo = poet.split("\t")
+    name = poetInfo[0].strip()
+    link = poetInfo[1].strip().split("?")[0]
+    poetObj = dictPoets.get(link)
+    if poetObj == None:
+        dictPoets[link]={"urdu":name}
+    else:
+        poetObj["urdu"]=name
+
+urduPoets.close()
