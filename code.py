@@ -121,3 +121,8 @@ print(colour_dic)
 
 with open('colour_dic.json', 'w') as file:
     json.dump(colour_dic, file)
+
+dictPoets = {}
+engPoets = open("rekhta_poets_english.tsv","r")
+hindiPoets = open("rekhta_poets_hindi.tsv","r",encoding="utf8")
+urduPoets = open("rekhta_poets_urdu.tsv","r",encoding="utf8")
