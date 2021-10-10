@@ -102,3 +102,9 @@ mn, mx, av = numerical_analysis(num)
 assert mn <= av <= mx
 
 print (num)
+
+lines = list()
+with open('colours.tsv', 'r') as file:
+    for line in file:
+        lines.append(line.strip().split('\t'))
+print(lines)
