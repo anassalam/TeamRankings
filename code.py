@@ -118,3 +118,6 @@ for i in lines[:10]:
         "blue" : col[2]
     }
 print(colour_dic)
+
+with open('colour_dic.json', 'w') as file:
+    json.dump(colour_dic, file)
