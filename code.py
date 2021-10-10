@@ -95,3 +95,10 @@ def numerical_analysis(randList):
     mx = max(randList)
     av = sum(randList) / len(randList)
     return mn, mx, av
+
+import random
+num = [random.randint(0,10) for x in range(100)]
+mn, mx, av = numerical_analysis(num)
+assert mn <= av <= mx
+
+print (num)
