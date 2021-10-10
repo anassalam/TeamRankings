@@ -108,3 +108,13 @@ with open('colours.tsv', 'r') as file:
     for line in file:
         lines.append(line.strip().split('\t'))
 print(lines)
+
+colour_dic = dict()
+for i in lines[:10]:
+    col = i[1].split(',')
+    colour_dic[i[0]] = {
+        "red" : col[0], 
+        "green": col[1],
+        "blue" : col[2]
+    }
+print(colour_dic)
